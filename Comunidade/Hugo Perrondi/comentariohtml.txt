@@ -1,0 +1,12 @@
+header -> cabeçalho
+div -> tag genêrica para criar bloco
+para usar no css ou no js
+main- principal
+section-sessão
+posso colocar um img src dentro de um a href
+dentro do espaço onde escreveria o nome do link
+assim aparecerá a imagem
+e ao clicar nela levaria a algo
+<a href ""> <img src= ""> </a>
+posso alterar o tamanho não só pelo css, mas se no link da img vier com tamanho destacado, posso mudar ali.
+svg é uma imagem que contem a mesma estrutura que um html
