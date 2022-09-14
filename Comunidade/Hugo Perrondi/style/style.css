@@ -1,3 +1,27 @@
+/* header * {
+  border: 1px solid red;
+}   */
+
+
+
+
+.image-profile img{
+  border-radius: 50%;
+  width: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+  margin:15px auto;
+  /*
+  era a margem que faltava para deixar centralizado kkk
+*/
+  width: 120px;
+  height: 120px;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -21,9 +45,9 @@ body * {
   line-height:180%;
 }
 
- /* main * {
+  /* main * {
   border: 1px solid red;
-}  */
+}   */
 
 main {
   max-width: 580px;
@@ -38,7 +62,7 @@ main {
 section{
   color:white;
   /* color muda apenas cor de elementos textuais*/
-  linear-gradient(90deg, );
+  
   background-image: linear-gradient(90deg,#9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
   padding-top: 4px;
   border-radius: 10px; 
