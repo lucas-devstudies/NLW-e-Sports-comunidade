@@ -1,0 +1,145 @@
+background-image:
+adiciona uma imagem
+no caso, usar a funcao url
+e selecionar a pasta com o arquivo
+
+background-position
+seleciona a posição da minha imagem, no caso, centro-center.
+o top-center vai fazer que ela sempre fique centralizada e no topo
+
+bakcground-size
+100% para largura, ou seja, sempre vai ser 100% da largura original da imagem ou do html
+auto para deixar a altura automatica
+ajustar o tamanho da imagem, nesse caso, ela ficou repetida
+para arrumar:
+
+background-repeat: no-repeat;
+para não repetir
+
+background-color
+para adicionar cor, desse jeito, a imagem ficou no centro em cima com cor preta
+em baixo
+
+max-width é para selecionar o máximo de largura que uma tag pode ter
+normalmente feita para pais.
+
+widht: 90%
+é para dizer que vai pegar apenas 90% da largura da tela html do navegador
+
+
+main * {
+  border: 1px solid red;
+}
+
+^^îMPORTANTÍSSIMO^^
+Vai pegar todos os elementos da main e colocar bordinhas
+assim conseguirei ver todas as divs e sections e etc,todos os containers direitinho
+tudo dentro do main
+
+margin- coloca margem para o elemento, auto, para colocar margem automatico
+de acordo com o tamanho
+no caso, colocar borda para todo o main, que vai pegar tudo que ta dentro.
+
+* vai selecionar tudo daquilo, * sozinho seleciona toda a pagina
+
+Reset CSS:
+Serve para resetar todas as config que já vem do navegador
+basta colocar * para selecionar tudo e deixar tudo 0!
+box-sizing : border-box
+normalmente o navegador faz uma soma especifica
+da sizing das box
+desse jeito, o calculo vai ser de acordo com a borda
+
+
+list-style: 
+alterar ou remover estilo das li, ou seja, remover pontinho/numeros ou 
+altera-los
+
+fontes: 
+adicionar link da fonte do google fonts no html
+e utilizar aqui 
+nesse caso, vou selecionar todos os elementos do body 
+e especificar a fonte com
+font-family
+que me dá a permissão de escolher outras caso a primeira ou anterior não ache
+
+posso selecionar um elemento especifico dentro de uma class ou id
+basta chama-lo após invokar a class ou id, por exemplo, para imagens
+.games-list img
+
+border-radius deixa as bordinhas redondas (as pontinhas)
+então estarei deixando as pontinhas das imgs dessa class redondinhas com 8px
+quando faz com 50% ao invés de 8px arredonda tudo!
+
+display:grid
+seleciona as box's filhas de um pai para configurar
+sem colocar uma do lado da outra como o flex
+e o gap também pode ser usado nela
+
+*o gap é usado em todos os displays ou só no grid e flex?
+flex-wrap: wrap;
+  /*coloca os elementos para baixo se passar do limite da borda*/
+
+
+
+
+
+
+  
+
+
+                ***ESTRUTURA: container dentro de container***
+O section é a bordinha degradê
+o div é todo o quadrado dentro/nafrente dessa bordinha
+todos os cartõezinhos/container estão no main.
+Se eu falar que o main tem 580 de largura máxima, que é o pai
+todos os filhos vão procurar ter o mesmo valor.
+
+
+DIVISÃO DE CONFIGURAÇÕES:
+Temos de lidar com generalizações e especificações no css.
+digamos que eu quero a configuração x e y em um <p> que está no body 
+mas, antes eu já tinha declarado que todos os filhos de body (*body)
+recebem a configuração x
+então não preciso especificar ela quando for chamar o <p>
+no caso então, eu chamo o <p> e coloco a config y que é particular dele
+e mais de ninguém
+só ignorar realmente configurações que já foram colocadas em tags gerais 
+(*main, *body, *section, ) e as que o navegador já traz
+para ver isso do navegador basta observar se as configurações trazem mudanças
+se eu colocar config x em um h2 particular 
+ele nao vira para meu p particular
+unico jeito dos dois pegarem a config x é especificando ela
+ao pai dos dois, que compartilhará a config x a todos seus filhos.
+ou apenas aos filhos que quero
+ou se não selecionar o filho que quero e adicionar configurações
+ai cada repetição desse filho recebera essa configuração 
+(section p, section h2)
+
+
+DISPLAY'S:
+
+Atributo que modifica a visualização das caixas
+-caixa em baixo da outra/do lado
+-caixa dentro de caixa
+-block significa que vai dar quebra de linha e cada elemento vai ficar embaixo
+-inline sinifica linha, ou seja, vão ser elementos que vão ficar do lado do outro
+
+-as li's são caixas que estão dentro de outra caixa, que é a ul 
+-se eu mudar uma propriedade da ul, ou seja, da caixa ul que armazena as li
+-todos os elementos vão sentir, todas as caixinhas dentro sofrerão alterações
+-o valor flex do display faz todos os elementos ficarem um ao lado da outra 
+-então, todos os elementos de todas as ul (de todas as sections) vão ficar um 
+-ao lado da outra.
+
+o flex não mexe na ul, apenas nos elementos dentro de um bloco
+  ou seja, de blocos dentro de um bloco
+  a configuração do ul, bloco pai, fica intacta
+  só modifica os bloquinhos/elementosfilhos de dentro 
+
+/*o gap só funciona porque coloquei o flex
+  sem ele, o gap não funcionaria
+  mas o que ele faz?
+ Ele adiciona modificações em elementos ao lado do outro
+ se eu não tivesse usado flex, eles não estariam um ao lado do outro 
+ então o flex não funcionaria kkk

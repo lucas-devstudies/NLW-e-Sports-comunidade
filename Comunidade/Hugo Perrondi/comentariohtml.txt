@@ -10,3 +10,7 @@ e ao clicar nela levaria a algo
 <a href ""> <img src= ""> </a>
 posso alterar o tamanho não só pelo css, mas se no link da img vier com tamanho destacado, posso mudar ali.
 svg é uma imagem que contem a mesma estrutura que um html
+
+para adicionar fontes do google, terá de colar antes do meta dentro do head
+adicionar o link do google fonts 
+e depois usar no css 
