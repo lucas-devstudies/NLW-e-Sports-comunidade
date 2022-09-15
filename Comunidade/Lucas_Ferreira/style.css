@@ -20,16 +20,38 @@ body * {
     font-family: 'Inter', sans-serif;
     line-height: 160%;
 }
+header{
+    padding-top: 32px;
+    text-align: center;
+    height: calc(120px + 32px);
+}
+
+header img{
+    width: 100%;
+    border-radius:  50%;
+}
+header div{
+    width: 120px;
+    margin: auto;
+
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+}
+header div:hover {
+    transform: scale(1.1);
+}
 
 main {
     max-width: 580px;
     width: 90%;
-    margin: auto;
+    margin: 32px auto;
 
     display: grid;
     gap: 24px;
-
-    margin-top: 32px;
 }
 
 section {
@@ -62,6 +84,13 @@ section ul {
 
     margin-top: 24px;
 }
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
 
 .games-list img {
     width: 90px;
@@ -71,4 +100,53 @@ section ul {
 .channel-list img {
     border-radius: 50%; 
     width: 70px;
+
+    border: 1px solid #443E54;
+}
+
+/* Animation*/
+
+header div{
+    animation: fromTop .7s .2s backwards;
+}
+main section{
+    animation: fromBottom 0.7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+main section:nth-child(3){
+    animation-delay: 0.8s;
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0)
+
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0)
+
+    }
 }
