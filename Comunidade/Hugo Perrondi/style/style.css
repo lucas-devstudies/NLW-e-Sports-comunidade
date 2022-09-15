@@ -1,26 +1,35 @@
-/* header * {
+ /* header * {
   border: 1px solid red;
-}   */
+}    */
 
-
-
-
-.image-profile img{
-  border-radius: 50%;
-  width: 90px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 32px;
-  margin:15px auto;
-  /*
-  era a margem que faltava para deixar centralizado kkk
-*/
-  width: 120px;
-  height: 120px;
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
 }
+
+header div {
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+  border-radius: 50%;
+
+  display: flex;
+  padding: 4px;
+
+  transition: transform .3s;
+}
+
+header div:hover {
+  transform: scale(1.1)
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+
 
 *{
   margin: 0;
@@ -45,14 +54,12 @@ body * {
   line-height:180%;
 }
 
-  /* main * {
-  border: 1px solid red;
-}   */
+
 
 main {
   max-width: 580px;
   width:90%;
-  margin: auto;
+  margin:  32px auto;
   display: grid;
   gap: 24px;
   margin-top:32px;
@@ -61,12 +68,10 @@ main {
 
 section{
   color:white;
-  /* color muda apenas cor de elementos textuais*/
-  
   background-image: linear-gradient(90deg,#9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
   padding-top: 4px;
   border-radius: 10px; 
-  /*ESSE É O PARANUE PRA DEIXAR AS BORDINHAS REDONDAS E COLORIDAS!*/
+  /
 }
 
 section div {
@@ -74,13 +79,12 @@ section div {
   padding: 32px;
   padding-top: 24px;
   border-radius: 8px;
-  /*modifica todos os divs de todos os sections
-  até arredondar borda*/
+  
 
 }
 
 section h2 {
-    /*apaguei pq o navegador já fazia para mim, deixei só o spacing*/
+   
     letter-spacing: -0.47px;
 
 }
@@ -88,37 +92,84 @@ section h2 {
 section p {
   letter-spacing: -0.18px;
   color: #A1A1AA;
-  /*todos os elementos textuais estavam white por causa do section acima
-  mas agora disse que apenas p da section não tera essa cor e que será um cor diferente
-  só para o p*/
+  
 }
 
 section ul {
-  display: flex;/*todos os li dentro de todas as ul's(de todas as sections)
-  ficarão uma ao lado da outra, e não em baixo.
-  o flex não mexe na ul, apenas nos elementos dentro de um bloco
-  ou seja, de blocos dentro de um bloco
-  a configuração do ul, bloco pai, fica intacta
-  só modifica os bloquinhos/elementosfilhos de dentro */
-  flex-wrap: wrap;
-  /*coloca os elementos para baixo se passar do limite da borda*/
+  display: flex;
   gap: 16px;
-  /*o gap só funciona porque coloquei o flex
-  sem ele, o gap não funcionaria
-  mas o que ele faz?
-  Ele faz modificações de espaçamentos de blocos filhos*/
   margin-top: 24px;
+  
+}
+
+section li:hover {
+  transform: scale(1.7)
+
+}
+
+section li {
+  transition: transform .3s;
 }
 
 .games-list img{
   border-radius: 8px;
   width: 90px;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  display: flex;
+  padding: 4px;
 
 }
 
 .channel-list img {
   border-radius: 50%;
   width: 70px;
+  
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  display: flex;
+  padding: 4px;
 }
 
- 
+ /* criar animação*/
+ header div {
+  animation: fromTop .7s .2s backwards;
+}
+
+main section {
+  animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+  animation-delay: .6s;
+}
+
+@keyframes fromTop {
+  from {
+      opacity: 0;
+      transform: translateY(-30px)
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+@keyframes fromBottom {
+  from {
+      opacity: 0;
+      transform: translatex(-30px)
+  }
+
+  to {
+      opacity: 1;
+      transform: translatex(0)
+  }
+}

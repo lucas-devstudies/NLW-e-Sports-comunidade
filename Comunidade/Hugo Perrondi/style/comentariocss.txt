@@ -27,6 +27,10 @@ widht: 90%
 é para dizer que vai pegar apenas 90% da largura da tela html do navegador
 
 
+/*text-align:center centralizada todos
+  os elementos de texto
+  e imagem também é considerada assim*/
+
 main * {
   border: 1px solid red;
 }
@@ -143,3 +147,25 @@ o flex não mexe na ul, apenas nos elementos dentro de um bloco
  Ele adiciona modificações em elementos ao lado do outro
  se eu não tivesse usado flex, eles não estariam um ao lado do outro 
  então o flex não funcionaria kkk
+
+
+
+
+border:4px;
+background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  display: flex;
+  padding: 4px;
+
+  -cria a borda
+  -traz a cor
+  -organiza
+  -preenche
+
+  
+
+:hover -> adicionar evento ao passar o mouse
+transform: scale(1.1)
+e essa tag vai fazer aumentar em 1.1
+
+transmition: transform .3s
+faz que dure 3s a transmissão
