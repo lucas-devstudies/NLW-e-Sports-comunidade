@@ -1,0 +1,31 @@
+/*-------------------REVISAR TÓPICO 'RESET DE CSS'---------------*/
+
+* {
+    margin: 0; /*Margem*/
+    padding: 0; /*Preenchimento interno da caixa*/
+    box-sizing: border-box; /*Funcionamento box: No width: Max-width:580px Padding:40px => Box <= Max-width + Padding
+                                Porém com a opção "Border-box' considera apenas 580px (mesmo com preenchimento)*/
+}
+
+ul {
+    list-style: none; /*Estilo da lista: Nenhum aka No more pontinhos*/
+}
+
+body {
+    background-image:url(./assets/bg.jpg); /* url: Função (argumento). Argumento: Em que lugar do mundo está a imagem*/
+    background-position: top center; /* Posicionamento*/
+    background-size: 100% auto; /*Largura; auto Altura*/
+    background-repeat: no-repeat; /*Não repetir bckgnd*/
+    background-color: #121214; /*Cor em Hexa decimal -> 2.1:red 2.2:green 2.3:blue */
+}
+
+main * {
+    border: 1px solid red;  /*Vai adicionar uma borda vermelha p/ tds os elementos do Main*/
+}
+
+main {
+    max-width: 500px; /*Main: Pai de todos(Os 3 elementos aka bloquinhos)*/
+                                /*Significa que td dentro do Main terá essa largura máx.*/
+    width: 90%;   /*Porcentagem relativa á largura da tela*/
+    margin: auto; /*Margem automática*/
+}
