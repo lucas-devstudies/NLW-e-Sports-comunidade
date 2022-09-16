@@ -1,5 +1,3 @@
-/*-------------------REVISAR TÓPICO 'RESET DE CSS'---------------*/
-
 * {
     margin: 0; /*Margem*/
     padding: 0; /*Preenchimento interno da caixa*/
@@ -19,8 +17,9 @@ body {
     background-color: #121214; /*Cor em Hexa decimal -> 2.1:red 2.2:green 2.3:blue */
 }
 
-main * {
-    border: 1px solid red;  /*Vai adicionar uma borda vermelha p/ tds os elementos do Main*/
+body * {
+   font-family: 'Inter', sans-serif; /*Serif: As ranhuras da fonte*/
+    line-height: 160%; /*Altura da linha*/
 }
 
 main {
@@ -28,4 +27,56 @@ main {
                                 /*Significa que td dentro do Main terá essa largura máx.*/
     width: 90%;   /*Porcentagem relativa á largura da tela*/
     margin: auto; /*Margem automática*/
+
+    display: grid;
+    gap: 24px;
+    
+    margin-top: 32px;
 }
+
+section {   
+    color: white;
+    background-image: linear-gradient(90deg,  #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+    
+}
+
+section div {
+    background-color:  #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+ 
+    /*border-top: 4px solid red;*/
+ } 
+
+section h2 {
+    letter-spacing: -0.47px; /*Espaço entre as letras*/
+}
+
+section p {
+    letter-spacing: -0.18px; /*Copiar as infos de size, space, etc.. e Analizar se há diferença*/
+    color: #A1A1AA;
+}
+
+section ul {
+    display:flex;      /*Display: Visualização; visualização do elemento        /*Tipos de Visualização: 1-Caixa e caixa que está aos seu lado
+                        Logo a visualização das caixas no HTML*/                                       /*  2-Caixas dentro de caixas */
+            /*Tipos de Displays: ***Block*** Bloqueia uma linha inteira, assim mantendo caixas abaixo de caixas/ 
+                                 ***Inline***Posiciona elementos um do lado dos outros, s/ bloquear a linha inteira*/ 
+       flex-wrap: wrap;
+       gap: 16px;   /*Cola um espaço entre os elementos dentro da caixa*/
+
+       margin-top: 24px;
+    }
+
+    .games-list img {
+        width: 90px;
+        border-radius: 8px;
+    }
+
+    .channel-list img {
+        border-radius: 50%;
+        width: 70px;
+    }
