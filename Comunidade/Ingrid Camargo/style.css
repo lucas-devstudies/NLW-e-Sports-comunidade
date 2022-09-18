@@ -22,16 +22,35 @@ body * {
     line-height: 160%; /*Altura da linha*/
 }
 
+header{
+    margin-top: 32px;
+    text-align: center;
+    }
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg,  #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+    margin: auto;
+}
+
 main {
     max-width: 500px; /*Main: Pai de todos(Os 3 elementos aka bloquinhos)*/
                                 /*Significa que td dentro do Main terá essa largura máx.*/
     width: 90%;   /*Porcentagem relativa á largura da tela*/
-    margin: auto; /*Margem automática*/
+    margin: 32px auto; /*Margem automática*/
 
     display: grid;
     gap: 24px;
-    
-    margin-top: 32px;
 }
 
 section {   
